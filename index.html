@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitación de Stitch a Pablo</title>
+  <style>
+    .contenedor {
+      position: relative;
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      max-width: 400px;
+      margin: 20px auto;
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #f0f8ff;
+    }
+    .contenedor img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .texto-invitacion {
+      margin: 15px 0;
+      font-size: 1.1em;
+      color: #333;
+    }
+    .boton-confirmar {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #25d366; /* color WhatsApp */
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .boton-confirmar:hover {
+      background-color: #128c4a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <img src="https://i.imgur.com/5z2Fq3T.png" alt="Stitch invitando a Pablo" />
+    <div class="texto-invitacion">
+      Stitch te invita a ver la película el <strong>jueves 22 de mayo</strong>.<br />
+      El traslado sale desde tu casa a las <strong>18:40</strong>.<br />
+      <em>Confirma respondiendo a Mathi:</em><br />
+      <strong>"sii, me encantaría ir contigo bebé hermoso"</strong>
+    </div>
+    <a 
+      href="https://wa.me/59896363611?text=Sii%2C%20me%20encantar%C3%ADa%20ir%20contigo%20beb%C3%A9%20hermoso%20mio" 
+      target="_blank" 
+      class="boton-confirmar"
+      aria-label="Confirmar asistencia por WhatsApp"
+    >
+      Confirmar por WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>
