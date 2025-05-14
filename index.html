@@ -4,63 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Invitación de Stitch a Pablo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #e6f7ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
     .contenedor {
-      position: relative;
-      display: inline-block;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      background-color: #ffffff;
+      border: 3px solid #4CAF50;
+      border-radius: 16px;
+      padding: 20px;
       max-width: 400px;
-      margin: 20px auto;
-      border: 2px solid #4CAF50;
-      border-radius: 10px;
-      padding: 10px;
-      background-color: #f0f8ff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
     }
+
     .contenedor img {
-      display: block;
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
     }
+
     .texto-invitacion {
-      margin: 15px 0;
-      font-size: 1.1em;
+      margin-top: 15px;
+      font-size: 1.15em;
       color: #333;
+      line-height: 1.5;
     }
+
     .boton-confirmar {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #25d366; /* color WhatsApp */
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #25d366;
       color: white;
       border: none;
-      padding: 12px 20px;
+      padding: 14px 24px;
       font-size: 1em;
-      border-radius: 25px;
+      border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
       text-decoration: none;
-      display: inline-block;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+
     .boton-confirmar:hover {
       background-color: #128c4a;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      .texto-invitacion {
+        font-size: 1em;
+      }
+
+      .boton-confirmar {
+        width: 100%;
+        padding: 12px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="contenedor">
-    <img src="https://i.imgur.com/5z2Fq3T.png" alt="Stitch invitando a Pablo" />
-    <div class="texto-invitacion">
+  <div class="contenedor" role="dialog" aria-labelledby="titulo-invitacion">
+    <img src="https://i.imgur.com/5z2Fq3T.png" alt="Ilustración de Stitch haciendo una invitación" />
+    <div class="texto-invitacion" id="titulo-invitacion">
       Stitch te invita a ver la película el <strong>jueves 22 de mayo</strong>.<br />
-      El traslado sale desde tu casa a las <strong>18:40</strong>.<br />
-      <em>Confirma respondiendo a Mathi:</em><br />
+      El traslado sale desde tu casa a las <strong>18:40</strong>.<br /><br />
+      <em>Confirma respondiendo a Mathi con:</em><br />
       <strong>"sii, me encantaría ir contigo bebé hermoso"</strong>
     </div>
     <a 
-      href="https://wa.me/59896363611?text=Sii%2C%20me%20encantar%C3%ADa%20ir%20contigo%20beb%C3%A9%20hermoso%20mio" 
+      href="https://wa.me/1234567890?text=sii%2C%20me%20encantar%C3%ADa%20ir%20contigo%20beb%C3%A9%20hermoso" 
       target="_blank" 
       class="boton-confirmar"
       aria-label="Confirmar asistencia por WhatsApp"
